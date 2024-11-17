@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: url("ganyu/cursor1.png"), auto;
+    font-smooth: antiaoiased;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../icomoon/fonts/icomoon.eot?fxcn4');
+    src: url('../icomoon/fonts/icomoon.eot?fxcn4#iefix') format('embedded-opentype'),
+        url('../icomoon/fonts/icomoon.ttf?fxcn4') format('truetype'),
+        url('../icomoon/fonts/icomoon.woff?fxcn4') format('woff'),
+        url('../icomoon/fonts/icomoon.svg?fxcn4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* 定义动画 */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, -20px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes spin_3d {
+    0% {
+        transform: rotateY(0);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* 结束 */
+
+/* 总体定义 */
+li {
+    list-style: none;
+}
+
+body {
+    min-width: 1680px;
+    background: #e9f1f6 url("ganyu/background.jpg") no-repeat scroll 0px 204px;
+    background-size: auto;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+em {
+    display: inline-block;
+}
+
+/* 结束 */
+
+/* 遮盖 */
+.mask {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* 遮盖结束 */
+
+/* 头部 */
+.first {
+    position: relative;
+    perspective: 600px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    background: #ffffff url("ganyu/images/title1_03.jpg") no-repeat scroll center center;
+    height: 204px;
+    min-width: 1680px;
+    top: 0;
+}
+
+.first .second {
+    position: absolute;
+    left: 440px;
+    top: 20px;
+    animation: spin 1s linear infinite;
+}
+
+.first .one {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.first .two {
+    position: absolute;
+    left: 1100px;
+    top: 20px;
+    z-index: 2;
+    animation: spin 1s linear infinite;
+}
+
+.second:hover,
+.two:hover {
+    animation-play-state: paused;
+}
+
+.first .last {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.one:hover,
+.last:hover {
+    animation: spin_3d .7s;
+}
+
+/* 头部结束 */
+
+/* 列表 */
+.nav {
+    height: 100px;
+}
+
+.nav ul {
+    width: 100%;
+    height: 100%;
+}
+
+.nav ul li {
+    list-style: none;
+    position: relative;
+    float: left;
+    font: italic 700 50px/100px "微软雅黑";
+    color: white;
+    background-color: transparent;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.9s;
+}
+
+.nav ul li:hover {
+    background-color: azure;
+    color: skyblue;
+    text-shadow: 4px 4px 6px #85f7f8;
+}
+
+.nav ul li:hover em {
+    animation: jump .3s;
+}
+
+.nav ul li em:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.nav ul li em:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.nav ul li em:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.nav ul li div {
+    display: none;
+    position: absolute;
+    font: normal 700 25px "微软雅黑";
+    width: 100%;
+    color: #70f3ff;
+    background-color: #e3f9fd;
+    z-index: 1;
+}
+
+.nav ul li:hover div {
+    display: block;
+}
+
+.nav ul li div h3 {
+    text-shadow: 0.5px 0.5px 1px black;
+}
+
+/* 列表结束 */
+/* 侧边栏 */
+.lan {
+    width: 121px;
+    position: fixed;
+    height: 116px;
+    top: 40%;
+    right: 0px;
+    z-index: 0;
+    vertical-align: bottom;
+    transition: all .6s;
+    cursor: url("ganyu/cursor1.png"), auto;
+}
+
+.lan:hover {
+    width: 242px;
+    height: calc(116px * 2);
+}
+
+/* 侧边栏结束 */
+/* 诗词 */
+.poem {
+    margin-top: 30px;
+    width: 75%;
+}
+
+.poem p {
+    font: italic 900 40px/50px "宋体";
+    height: 70px;
+    color: skyblue;
+    transition: all .3s;
+}
+
+.poem p:hover {
+    font-size: 45px;
+    line-height: 70px;
+    text-shadow: 2px 2px 2px #85f7f8;
+    background-color: #fff2dfa3;
+    animation: jump .3s;
+    animation-delay: .3s;
+}
+
+/* 诗词结束 */
+/* 记得设置宽度和高度 */
+/* 图片排列 */
+.banner {
+    width: 100%;
+    background-color: #e9f1f6;
+    margin-top: 111px;
+    position: relative;
+}
+
+.banner:before,
+.banner:after {
+    content: "";
+    display: table;
+}
+
+.banner:after {
+    clear: both;
+}
+
+.banner {
+    *zoom: 1;
+}
+
+.banner ul {
+    width: 100%;
+    height: 100%;
+}
+
+.banner ul li {
+    float: left;
+    background-color: #e3f9fd;
+    width: 25%;
+    text-align: center;
+    transition: all 1s;
+}
+
+.banner ul li img {
+    filter: blur(5px);
+    transition: all 1s;
+}
+
+.banner ul li h3 {
+    font: normal 600 25px "微软雅黑";
+    color: #70f3ff;
+    transition: all 1s;
+}
+
+.banner ul li:hover {
+    box-shadow: 2px 2px 4px 4px #ff441f9e;
+    animation: jump .3s;
+}
+
+.banner ul li:hover h3,
+.banner ul li:hover img {
+    text-shadow: 0.5px 0.5px 1px black;
+    filter: none;
+}
+
+.banner .san {
+    width: 50%;
+}
+
+/* 结束 */
+
+/* 底部 */
+
+.bottom {
+    background-color: #e3f9fd;
+    font: normal 900 30px "宋体", "icomoon";
+    width: 50%;
+    color: #f47983;
+    position: absolute;
+    left: 25%;
+    top: 630px;
+    cursor: url("ganyu/cursor1.png"), auto;
+    transition: all 0.5s;
+}
+
+.bottom:hover {
+    box-shadow: 2px 2px 2px 2px #ffc64b;
+    text-shadow: 2px 2px 2px #bce672;
+    cursor: url("ganyu/cursor1.png"), auto;
+    animation: jump 0.3s;
+}
+
+/* 结束 */

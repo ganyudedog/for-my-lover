@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 注意删掉之前的没删完的标签 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>for my lover</title>
+    <link rel="shortcut icon" type="image/x-icon" href="ganyu/favicon.ico" />
+    <link rel="stylesheet" href="ganyu.css">
+    <script type="text/javascript">
+        window.onload = function () {
+            setInterval("toggleSound()", 100);
+        }
+        function toggleSound() {
+            var music = document.getElementById("vd");//获取ID  
+            if (music.paused) { //判读是否播放  
+                music.paused = false;
+                music.play(); //没有就播放 
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <audio preload autoplay loop id="vd">
+        <source src="ganyu/夏恋慕.mp3" type="audio/mpeg">
+    </audio>
+    <!-- 这个音乐需要点网页一下才能触发 -->
+    <!-- 遮盖区域 -->
+    <!-- 遮盖结束 -->
+    <!-- 头部区域 -->
+    <div class="first" id="1">
+        <img src="ganyu/title.psd" alt="" class="one" width="204px"><img src="ganyu/images/yuansu_03.png" alt=""
+            class="second">
+        <img src="ganyu/images/yuansu_03.png" alt="" class="two"><img src="ganyu/title.psd" alt="" class="last"
+            width="204px">
+        <!--这里其实可以用div将img框起来,这样就可以避免左右两边图片的定位 -->
+        <!-- 其实中间的冰元素也可用div将其框起来,从而使用浮动和外边距解决问题,就不需要定位了 -->
+    </div>
+    <!-- 头部结束 -->
+
+    <!-- 列表开始 -->
+    <div class="nav">
+        <ul>
+            <li><em>甘</em><em>之</em><em>如</em><em>饴</em>
+                <div>
+                    <img src="ganyu/see.png" alt="" width="100%">
+                    <h3>但愿君心似我心,定不负相思意</h3>
+                </div>
+            </li>
+            <li><em>雨</em><em>泽</em><em>众</em><em>生</em>
+                <div><img src="ganyu/shy.png" alt="" width="100%">
+                    <h3>最是那一惊讶的温柔,像一朵清心不胜凉风的娇羞</h3>
+                </div>
+            </li>
+            <li><em>半</em><em>人</em><em>半</em><em>仙</em>
+                <div>
+                    <img src="ganyu/look.jpg" alt="" width="100%">
+                    <h3>只缘感君一回顾,使我思君朝与暮</h3>
+                </div>
+            </li>
+            <li><em>甘</em><em>门</em><em>永</em><em>存</em>
+                <div>
+                    <img src="ganyu/dance.jpg" alt="" width="100%">
+                    <h3>眉梢眼角藏秀气,声音笑貌露温柔</h3>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 列表结束 -->
+    <div class="lan"><a href="#1"><img src="ganyu/emotion.jpg" alt="" width="100%" title="点一下"></a></div>
+    <!-- 诗词开始 -->
+    <div class="poem">
+        <p>从云雾缭绕的绝云间</p>
+        <p>到万家灯火的璃月港</p>
+        <p>孤寂常伴于你的心间</p>
+        <p>无法融入这华灯节彩</p>
+        <p>但,我所爱的甘雨啊!</p>
+        <p>你只要记住一点</p>
+        <p>我会守在你的身边</p>
+        <p>一直一直,直至生命尽头</p>
+        <p>或许你永远只存在于二次元</p>
+        <p>但我在三次元永远爱你</p>
+        <p>若待得君来向此,花前对酒不忍触</p>
+        <p>甘雨,大好きです</p>
+    </div>
+    <!-- 诗词结束 -->
+    <!-- 排列1开始 -->
+    <div class="banner">
+        <ul>
+            <li><img src="ganyu/lookback.jpg" alt="" width="100%">
+                <h3>曲终人散空愁暮,一低首,一回眸,空流泪千行</h3>
+            </li>
+            <li class="san"><img src="ganyu/sleep.jpg" alt="" width="100%">
+                <h3>你笑,春花秋月夏蝉冬雪;你不笑,春夏秋冬</h3>
+            </li>
+
+            <li><img src="ganyu/lookback1.jpg" alt="" width="100%">
+                <h3>千秋无绝色,悦目是佳人;倾国倾城貌,惊为天下人</h3>
+            </li>
+        </ul>
+        <h2 class="bottom">无论是过去,现在,亦或是未来,我都会永远永远喜欢甘雨小姐。我是甘雨小姐的狗!!!<img
+                src="https://img-static.mihoyo.com/communityweb/upload/4d41193fa02ac31e2daf7436ba5e12cf.png"
+                width="100"><img
+                src="https://img-static.mihoyo.com/communityweb/upload/4d41193fa02ac31e2daf7436ba5e12cf.png"
+                width="100"><img
+                src="https://img-static.mihoyo.com/communityweb/upload/4d41193fa02ac31e2daf7436ba5e12cf.png"
+                width="100">
+        </h2>
+    </div>
+    <!-- 排列1结束 -->
+</body>
+
+</html>
